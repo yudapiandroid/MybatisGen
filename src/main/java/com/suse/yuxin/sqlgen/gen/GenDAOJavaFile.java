@@ -5,7 +5,6 @@ import com.suse.yuxin.sqlgen.entity.SqlMetaInfo;
 import com.suse.yuxin.sqlgen.entity.TableMetaInfo;
 import com.suse.yuxin.sqlgen.gen.sql.SQLRegister;
 import com.suse.yuxin.sqlgen.util.Utils;
-import org.apache.ibatis.annotations.Mapper;
 
 import javax.lang.model.element.Modifier;
 import java.io.File;
