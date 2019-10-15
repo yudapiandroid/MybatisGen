@@ -3,17 +3,42 @@
 
 - 使用的是动态SQL的方式
 
+- 添加依赖
+```xml
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.yudapiandroid</groupId>
+            <artifactId>MybatisGen</artifactId>
+            <version>v0.3</version>
+        </dependency>
+    </dependencies>    
+```
+
 - 使用方法
 
 ```java
     
-    private static final url = "数据库链接URL";
-    public static final name = "数据库用户名";
-    public static final password = "数据库密码";
-    public static final targetPackage = "生成文件的包名 eg: com.suse.yuxin.base";
+    import com.suse.yuxin.sqlgen.Gener;
     
-    public static void main(String[] args) {
-        new Gener().gen(url, name, password, targetPackage);
+    public class Main {
+    
+        private static final String url = "数据库链接URL";
+        private static final String name = "数据库用户名";
+        private static final String password = "数据库密码";
+        private static final String targetPackage = "生成文件的包名 eg: com.suse.yuxin.base";
+            
+        public static void main(String[] args) throws Exception {
+            new Gener().gen(url, name, password, targetPackage);
+        }
+    
     }
 
 ```
